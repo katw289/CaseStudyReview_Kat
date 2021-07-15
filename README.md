@@ -19,10 +19,10 @@ Loop(while stack isn't empty):
 We count an area unit each time we "count" a node.
 
 ### Let's talk efficiency!
-*Every single node must be visited to check if it is uncounted and fertile. It is possible for a single fertile node to be disconnected from any other fertile land, so none can be left out. O(X*Y), in this case, O(240,000)
-*Every fertile node is added to the stack exactly once. It will never be revisited. O(num fertile nodes)
-*The stack (which could hold up to 240,000 nodes in the worst case) is implemented using a deque instead of a list, to take advantage of the O(1) append and pop operations. (If we used a list, this would be O(N))
-*After taking these steps to optimize, I prioritized clear and modular code, as in production code, it needs to be maintainable.
+* Every single node must be visited to check if it is uncounted and fertile. It is possible for a single fertile node to be disconnected from any other fertile land, so none can be left out. O(X*Y), in this case, O(240,000)
+* Every fertile node is added to the stack exactly once. It will never be revisited. O(num fertile nodes)
+* The stack (which could hold up to 240,000 nodes in the worst case) is implemented using a deque instead of a list, to take advantage of the O(1) append and pop operations. (If we used a list, this would be O(N))
+* After taking these steps to optimize, I prioritized clear and modular code, as in production code, it needs to be maintainable.
 
 
 ## Testing
